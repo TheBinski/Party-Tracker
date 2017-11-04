@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
@@ -42,48 +45,92 @@
       </MenuBar>
    </top>
    <center>
-      <TabPane prefHeight="200.0" prefWidth="200.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+      <TabPane prefHeight="200.0" prefWidth="200.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
           <Tab text="Untitled Tab 1">
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <left>
+                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+                          <items>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                 <center>
+                                    <GridPane BorderPane.alignment="CENTER">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="110.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="65.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                       <children>
+                                          <Label text="Strength" GridPane.rowIndex="1" />
+                                          <Label text="Dextarity" GridPane.rowIndex="2" />
+                                          <Label text="Constitution" GridPane.rowIndex="3" />
+                                          <Label text="Intelligence" GridPane.rowIndex="4" />
+                                          <Label text="Wisdom" GridPane.rowIndex="5" />
+                                          <Label text="Charisma" GridPane.rowIndex="6" />
+                                          <TextField fx:id="strNum" promptText="Str" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="dexNum" promptText="Dex" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="conNum" promptText="Con" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <TextField fx:id="intNum" promptText="Int" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextField fx:id="wisNum" promptText="Wis" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <TextField fx:id="chaNum" promptText="Cha" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <Label fx:id="strengthMod" text="Mod" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                          <Label fx:id="dexMod" text="Mod" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                          <Label fx:id="conMod" text="Mod" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                          <Label fx:id="intMod" text="Mod" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                          <Label fx:id="wisMod" text="Mod" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                          <Label fx:id="chaMod" text="Mod" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                          <Label text="Stat" />
+                                          <Label text="Base" GridPane.columnIndex="1" />
+                                          <Label text="Bonus" GridPane.columnIndex="2" />
+                                          <Label text="Mods" GridPane.columnIndex="3" />
+                                       </children>
+                                    </GridPane>
+                                 </center></BorderPane>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" />
+                          </items>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </SplitPane>
+                     </left>
+                     <top>
                         <GridPane BorderPane.alignment="CENTER">
                           <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
                           <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Label alignment="CENTER" text="Strength" />
-                              <Label alignment="CENTER" contentDisplay="CENTER" text="Dexterity" GridPane.rowIndex="1" />
-                              <Label text="Constitution" GridPane.rowIndex="2" />
-                              <Label text="Intelligence" GridPane.rowIndex="3" />
-                              <Label text="Wisdom" GridPane.rowIndex="4" />
-                              <Label text="Charisma" GridPane.rowIndex="5" />
-                              <TextField promptText="Strength" GridPane.columnIndex="1" />
-                              <TextField promptText="Dexterity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField promptText="Constitution" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField promptText="Intelligence" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextField promptText="Wisdom" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextField promptText="Charisma" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <Label fx:id="strengthMod" text="+0" GridPane.columnIndex="2" />
-                              <Label fx:id="dexMod" text="+0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <Label fx:id="conMod" text="+0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                              <Label fx:id="intMod" text="+0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                              <Label fx:id="wisMod" text="+0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                              <Label fx:id="chaMod" text="+0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <TextField fx:id="charName" promptText="Character Name" />
+                              <ChoiceBox fx:id="classBox" prefWidth="150.0" value="Class" GridPane.columnIndex="1">
+                              </ChoiceBox>
+                              <ChoiceBox fx:id="raceBox" prefWidth="150.0" GridPane.columnIndex="2" />
+                              <ChoiceBox fx:id="allignmentBox" prefWidth="150.0" GridPane.columnIndex="3">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </ChoiceBox>
                            </children>
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
                         </GridPane>
-                     </left>
+                     </top>
                   </BorderPane>
                </content>
           </Tab>

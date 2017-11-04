@@ -16,6 +16,10 @@ public class MainWindowController implements Initializable{
 
     @FXML
     Label strengthMod, dexMod, conMod, intMod, wisMod, chaMod;
+    @FXML
+    ChoiceBox allignmentBox, raceBox, classBox;
+    @FXML
+    TextField charName, strNum, dexNum, conNum, intNum, wisNum, chaNum;
 
     @FXML
     protected void openHelpWindow(ActionEvent e) throws IOException{
